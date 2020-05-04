@@ -1,0 +1,70 @@
+#body{
+    background-color: orange;
+}
+#back{
+    background-color: black;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+}
+
+#ramka{
+    position: relative;
+    border-style: dashed;
+    border-width: 3px;
+    margin: 1%;
+    color: orange;
+    padding: 1%;
+}
+
+h1:first-letter{color: red;font-family: 'Manrope', sans-serif;}
+
+h1{color: gainsboro; font-family: 'Manrope', sans-serif;}
+
+h4::first-letter{color: red; font-family: 'Manrope', sans-serif;}
+h4{color: gainsboro; font-family: 'Manrope', sans-serif;}
+
+p::first-letter{color: red; font-family: 'Manrope', sans-serif;}
+
+p{color: gainsboro; font-family: 'Manrope', sans-serif;}
+
+b{color: gainsboro; font-family: 'Manrope', sans-serif;}
+
+#ramka_footer{
+    border-style: dashed;
+    border-width: 3px;
+    margin: 1%;
+    color: orange;
+    padding: 1%;
+}
+
+input{
+    font-family: 'Manrope', sans-serif;
+    border-radius: 10px;
+    border-width: 0;
+    text-align: center;
+    font-size: 80%;
+    width: 80%;
+}
+
+#buttom{
+    width: 300px;
+    color: white;
+    background-color: orange;
+}
+@media screen and (min-width:1200px) {
+    body { font-size:110%; } /* Увеличить размер шрифта */
+}
+@media screen and (min-width:1400px) {
+    html { font-size:125%; } /* Уменьшить ширину контейнера */
+}
+@media screen and (min-width:1600px) {
+    body { font-size:150%; } /* Увеличить размер шрифтаe */
+}
+@media screen and (min-width:1800px) {
+    html {font-size:200%;} /* Уменьшить ширину контейнера */
+}
+@media screen and (min-width:2000px) {
+    html { font-size:250%;} /* Уменьшить ширину контейнера */
+}
