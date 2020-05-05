@@ -77,7 +77,7 @@
         while (kol < Mistresses) {
           ind = getRandomInt(0, Mafias-1);
           if (ar_maf[ind] != 0){
-            Num_Mis += String(ind+1) + " ";
+            Num_Mis += String(ar_maf[ind]) + " ";
             kol+=1;
             ar_maf[ind] = 0;
           }
