@@ -20,10 +20,11 @@
     var Mistresses = parseInt(document.getElementById('Mistresses').value);
     var Avengers = parseInt(document.getElementById('Avengers').value);
     var summas = Mafias + Commissioners + Doctors + Maniacs + Mistresses + Avengers;
-    if (Players < 3 || Players < summas)
+    if (Players < 3 || Players < summas || Mistresses > Mafias)
       var res = "Вы ввели количество игроков меньше 3 или суммарное количество персонажей больше участников.";
     else{
       let array = [];
+      let ar_maf = [];
       for (let index = 1; index <= Players; index++) {
         array.push(index);
       }
@@ -36,6 +37,7 @@
           Num_Mafis += String(ind+1) + " ";
           kol+=1;
           array[ind] = 0;
+          ar_maf.push(ind+1);
         }
       }
       kol = 0;
@@ -69,13 +71,16 @@
         }
       }
       kol = 0;
-      var Num_Mis = "";
-      while (kol < Mistresses) {
-        ind = getRandomInt(0, Players-1);
-        if (array[ind] != 0){
-          Num_Mis += String(ind+1) + " ";
-          kol+=1;
-          array[ind] = 0;
+      var Num_Mis = " ";
+      
+      if (Mistresses > 0){
+        while (kol < Mistresses) {
+          ind = getRandomInt(0, Mafias-1);
+          if (ar_maf[ind] != 0){
+            Num_Mis += String(ind+1) + " ";
+            kol+=1;
+            ar_maf[ind] = 0;
+          }
         }
       }
       kol = 0;
