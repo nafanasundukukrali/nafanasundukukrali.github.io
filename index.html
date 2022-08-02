@@ -3,143 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta id="numbers" lang="ru" content="Рандомайзер для мафии">
+<meta id="numbers" lang="ru" content="nafanasundukukrali silver edition">
 <link rel="stylesheet" href="style.css">
-<title>Рандомайзер для мафии</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@523;800&display=swap" rel="stylesheet">
-<script>
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
-  function Complete()
-  {
-    var Players = parseInt(document.getElementById('Players').value);
-    var Mafias = parseInt(document.getElementById('Mafias').value);
-    var Commissioners = parseInt(document.getElementById('Commissioners').value);
-    var Doctors = parseInt(document.getElementById('Doctors').value);
-    var Maniacs = parseInt(document.getElementById('Maniacs').value);
-    var Mistresses = parseInt(document.getElementById('Mistresses').value);
-    var Avengers = parseInt(document.getElementById('Avengers').value);
-    var summas = Mafias + Commissioners + Doctors + Maniacs + Avengers;
-    if (Players < 3 || Players < summas || Mistresses > Mafias)
-      var res = "Вы ввели количество игроков меньше 3 или суммарное количество персонажей больше участников.";
-    else{
-      let array = [];
-      let ar_maf = [];
-      for (let index = 1; index <= Players; index++) {
-        array.push(index);
-      }
-      var kol = 0;
-      var Num_Mafis = " ";
-      var ind = 0;
-      while (kol < Mafias) {
-        ind = getRandomInt(0, Players-1);
-        if (array[ind] != 0){
-          Num_Mafis += String(ind+1) + " ";
-          kol+=1;
-          array[ind] = 0;
-          ar_maf.push(ind+1);
-        }
-      }
-      kol = 0;
-      var Num_Com = " ";
-      while (kol < Commissioners) {
-        ind = getRandomInt(0, Players-1);
-        if (array[ind] != 0){
-          Num_Com += String(ind+1) + " ";
-          kol+=1;
-          array[ind] = 0;
-        }
-      }
-      kol = 0;
-      Num_Doc = " ";
-      while (kol < Doctors) {
-        ind = getRandomInt(0, Players-1);
-        if (array[ind] != 0){
-          Num_Doc += String(ind+1) + " ";
-          kol+=1;
-          array[ind] = 0;
-        }
-      }
-      kol = 0;
-      var Num_Man = " ";
-      while (kol < Maniacs) {
-        ind = getRandomInt(0, Players-1);
-        if (array[ind] != 0){
-          Num_Man += String(ind+1) + " ";
-          kol+=1;
-          array[ind] = 0;
-        }
-      }
-      kol = 0;
-      var Num_Mis = " ";
-      
-      if (Mistresses > 0){
-        while (kol < Mistresses) {
-          ind = getRandomInt(0, Mafias-1);
-          if (ar_maf[ind] != 0){
-            Num_Mis += String(ar_maf[ind]) + " ";
-            kol+=1;
-            ar_maf[ind] = 0;
-          }
-        }
-      }
-      kol = 0;
-      var Num_Av = "";
-      while (kol < Avengers) {
-        ind = getRandomInt(0, Players-1);
-        if (array[ind] != 0){
-          Num_Av += String(ind+1) + " ";
-          kol+=1;
-          array[ind] = 0;
-        }
-      }
-      var res = "Мафии: "+Num_Mafis+'\n'+"Комиссары: " + Num_Com +'\n' + "Доктора: " + Num_Doc + '\n'+ "Маньяки: "+Num_Man + '\n'+"Любовницы: " + Num_Mis + '\n'+"Мстители: "+ Num_Av;
-    }
-    document.getElementById('outputvalue').innerText = res;
-  }
-</script>
-
+<title>nafanasundukukrali silver edition</title>
+<script src="js/index.js"></script>
+<link rel="stylesheet" href="css/costume.min.css">
 </head>
-  <body id = "body">
-      <div id = "back">
-      <div id = "ramka">
-          <h1>Рандомайзер для Мафии</h1>
-      </div>
+<body>
+  <div class="container">
+    <h1 class="first-h1">nafanasundukukrali</h1>
+    <h1>silver edition</h1>
+    <br>
+    <figure class=" bg-white p-3 rounded blockquote-box-style">
+      <blockquote class="blockquote pb-2">
+        <p>Страницы, написанные/недоразработанные @nafanasundukukrali, или 
+          в которых данное заинтересованное лицо принимало участие</p>
+        <p class="text-body text-opacity-50">Ахтунг: заинтересованное лицо надеется когда-нибудь действительно красивой сделать данную страницу, но пока что есть...</p>
+      </blockquote>
+    </figure>
+  </div>
+  <div>
 
-      <div id = "ramka">
-        <p>Задайте каждому участнику игры порядковый номер и заполните следующую форму.</p>
-      </div>
-      
-      <form name="Sel1" id="ramka">
+  <div class="container">
+  <ul class="list-group">
+    <li><a href="https://nafanasundukukrali.github.io/mafia/">Рандомазйер для мафии, май 2020</a></li>
+    <li><a href="https://nafanasundukukrali.github.io/kgby/">Калькулятор КЖБУ, май 2020</a></li>
+    <li><a href="https://github.com/DanMax03/assemblerJS">
+      Дизассемблер, июль 2020 
+      <p class="text-body text-opacity-50 pt-1">
+        (если бы заинтересованное лицо знало бы ресурс, где сие в итоге расположилось и расположилось ли вообще...)
+      </p>
+    </a></li>
+  </ul>
+</div>
 
-        <table>
-          <tr><td><b>Количество игроков:<b></td>
-            <td><input type="text" id= "Players" class="form-control" size=20 value=0 onFocus="this.select()"></td></tr>
-          <tr><td><b>Количество мафий:<b></td>
-            <td><input type="text" id="Mafias" class="form-control" size=20 value=0 onFocus="this.select()"></td></tr>
-          <tr><td><b>Количество комиссаров:<b></td>
-            <td><input type="text" id="Commissioners" size=20 value=0 onFocus="this.select()"></td></tr>
-          <tr><td><b>Количество докторов:<b></td>
-            <td><input type="text" id="Doctors" size=20 value=0 onFocus="this.select()"></td></tr>
-          <tr><td><b>Количество маньяков:<b></td>
-              <td><input type="text" id="Maniacs" size=20 value=0 onFocus="this.select()"></td></tr>
-          <tr><td><b>Количество любовниц:<b></td>
-              <td><input type="text" id="Mistresses" size=20 value=0 onFocus="this.select()"></td></tr>
-          <tr><td><b>Количество мстителей:<b></td>
-              <td><input type="text" id="Avengers" size=20 value=0 onFocus="this.select()"></td></tr>
-          </table>
-
-        <input type="button" id = "buttom" value="Готово" onClick="Complete();">
-        <input type="reset" id = "buttom" value="Сброс">
-      </form>
-      
-      <div id = "ramka">
-          <b id = "outputvalue"></b>
-      </div>
-      <div id = "ramka_footer">
-        <h4>То, что здесь всё оранжевое - ничего не значит ¯\_(ツ)_/¯</h4>
-      </div>
-      </div>
-  </body>
+  <br>
+  <div class="container">
+    <p>
+    <a href="https://github.com/nafanasundukukrali">nafanasundukukrali</a>, 2022г
+  </p>
+  </div>
+  </div>
+</body>
 </html>
